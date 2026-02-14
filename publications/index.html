@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-year','listing-title','listing-journal','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-year','listing-title','listing-journal','listing-author',{ data: ['index'] },{ data: ['categories'] }],
       
       searchColumns: ["listing-year","listing-title","listing-journal","listing-author"],
     };
@@ -367,7 +367,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
@@ -377,7 +377,7 @@ window.Quarto = {
       <option value="listing-year" data-direction="asc">
         Year
       </option>
-      <option value="listing-title-sort" data-direction="asc">
+      <option value="listing-title" data-direction="asc">
         Title
       </option>
       <option value="listing-journal" data-direction="asc">
@@ -396,299 +396,327 @@ window.Quarto = {
 <table class="quarto-listing-table table">
 <thead>
 <tr>
-
-<th>
-<a class="sort" data-sort="listing-year" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Year</a>
+<th style="width: 5%;">
+Year
 </th>
-
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+<th style="width: 50%;">
+Title
 </th>
-
-<th>
-<a class="sort" data-sort="listing-journal" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Publisher</a>
+<th style="width: 25%;">
+Authors
 </th>
-
-<th>
-<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Authors</a>
+<th style="width: 20%;">
+Journal
 </th>
-
 </tr>
 </thead>
 <tbody class="list">
-
-<tr data-index="0" data-listing-title-sort="A Database of Databases for Common Era Paleoclimate Applications">
-<td>
-<span class="listing-year">2026</span>
+<tr data-index="0">
+<!-- Year Column -->
+<td class="listing-year">
+2026
 </td>
-<td>
-<a href="evansDatabaseDatabasesCommon2026" class="title listing-title">A Database of Databases for Common Era Paleoclimate Applications</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.5194/essd-18-1185-2026"> A Database of Databases for Common Era Paleoclimate Applications </a>
 </td>
-<td>
-<span class="listing-journal">Earth System Science Data</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Evans, Michael N. and Lücke, Lucie J. and Fan, Kevin J. and Zhu, Feng
 </td>
-<td>
-<span class="listing-author">Evans, Michael N. and L{"u}cke, Lucie J. and Fan, Kevin J. and Zhu, Feng</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Earth System Science Data</i>
 </td>
-
 </tr>
-
-<tr data-index="1" data-listing-title-sort="Temporal Comparisons Involving Paleoclimate Data Assimilation: Challenges and Remedies">
-<td>
-<span class="listing-year">2025</span>
+<tr data-index="1">
+<!-- Year Column -->
+<td class="listing-year">
+2025
 </td>
-<td>
-<a href="emile-geayTemporalComparisonsInvolving2025" class="title listing-title">Temporal Comparisons Involving Paleoclimate Data Assimilation: Challenges and Remedies</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.1175/JCLI-D-24-0101.1"> Temporal Comparisons Involving Paleoclimate Data Assimilation: Challenges and Remedies </a>
 </td>
-<td>
-<span class="listing-journal">Journal of Climate</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Emile-Geay, Julien and Hakim, Gregory J. and Viens, Frederi and Zhu, Feng and Amrhein, Daniel E.
 </td>
-<td>
-<span class="listing-author">{Emile-Geay}, Julien and Hakim, Gregory J. and Viens, Frederi and Zhu, Feng and Amrhein, Daniel E.</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Journal of Climate</i>
 </td>
-
 </tr>
-
-<tr data-index="2" data-listing-title-sort="IsoSim: A Long-term Benchmark Dataset for Water Isotope Emulation in Global Climate Models">
-<td>
-<span class="listing-year">2025</span>
+<tr data-index="2">
+<!-- Year Column -->
+<td class="listing-year">
+2025
 </td>
-<td>
-<a href="liIsoSimLongtermBenchmark2025" class="title listing-title">IsoSim: A Long-term Benchmark Dataset for Water Isotope Emulation in Global Climate Models</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href=""> IsoSim: A Long-term Benchmark Dataset for Water Isotope Emulation in Global Climate Models </a>
 </td>
-<td>
-<span class="listing-journal">Proceedings of the 33rd {{ACM International Conference}} on {{Advances}} in {{Geographic Information Systems}}</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Li, Zhili and Cheng, Qi and Li, Ruohan and Zhu, Feng and Jia, Xiaowei and Xie, Yiqun
 </td>
-<td>
-<span class="listing-author">Li, Zhili and Cheng, Qi and Li, Ruohan and Zhu, Feng and Jia, Xiaowei and Xie, Yiqun</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Proceedings of the 33rd ACM International Conference on Advances in Geographic Information Systems</i>
 </td>
-
 </tr>
-
-<tr data-index="3" data-listing-title-sort="The Unstable East Asian Summer Monsoon - ENSO Relationship over the Past 700 Years">
-<td>
-<span class="listing-year">2025</span>
+<tr data-index="3">
+<!-- Year Column -->
+<td class="listing-year">
+2025
 </td>
-<td>
-<a href="luoUnstableEastAsian2025" class="title listing-title">The Unstable East Asian Summer Monsoon - ENSO Relationship over the Past 700 Years</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.1016/j.gloplacha.2025.104842"> The Unstable East Asian Summer Monsoon - ENSO Relationship over the Past 700 Years </a>
 </td>
-<td>
-<span class="listing-journal">Global and Planetary Change</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Luo, Jinfeng and Hu, Jun and Zhu, Feng and Liang, Risheng and Zhou, Zeyu
 </td>
-<td>
-<span class="listing-author">Luo, Jinfeng and Hu, Jun and Zhu, Feng and Liang, Risheng and Zhou, Zeyu</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Global and Planetary Change</i>
 </td>
-
 </tr>
-
-<tr data-index="4" data-listing-title-sort="Cfr (V2024.1.26): A Python Package for Climate Field Reconstruction">
-<td>
-<span class="listing-year">2024</span>
+<tr data-index="4">
+<!-- Year Column -->
+<td class="listing-year">
+2024
 </td>
-<td>
-<a href="zhuCfrV2024126Python2024" class="title listing-title">Cfr (V2024.1.26): A Python Package for Climate Field Reconstruction</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.5194/gmd-17-3409-2024"> Cfr (V2024.1.26): A Python Package for Climate Field Reconstruction </a>
 </td>
-<td>
-<span class="listing-journal">Geoscientific Model Development</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Zhu, Feng and Emile-Geay, Julien and Hakim, Gregory J. and Guillot, Dominique and Khider, Deborah and Tardif, Robert and Perkins, Walter A.
 </td>
-<td>
-<span class="listing-author">Zhu, Feng and {Emile-Geay}, Julien and Hakim, Gregory J. and Guillot, Dominique and Khider, Deborah and Tardif, Robert and Perkins, Walter A.</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Geoscientific Model Development</i>
 </td>
-
 </tr>
-
-<tr data-index="5" data-listing-title-sort="A Pseudoproxy Emulation of the PAGES 2k Database Using a Hierarchy of Proxy System Models">
-<td>
-<span class="listing-year">2023</span>
+<tr data-index="5">
+<!-- Year Column -->
+<td class="listing-year">
+2023
 </td>
-<td>
-<a href="zhuPseudoproxyEmulationPAGES2023" class="title listing-title">A Pseudoproxy Emulation of the PAGES 2k Database Using a Hierarchy of Proxy System Models</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.1038/s41597-023-02489-1"> A Pseudoproxy Emulation of the PAGES 2k Database Using a Hierarchy of Proxy System Models </a>
 </td>
-<td>
-<span class="listing-journal">Scientific Data</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Zhu, Feng and Emile-Geay, Julien and Anchukaitis, Kevin J. and McKay, Nicholas P. and Stevenson, Samantha and Meng, Zilu
 </td>
-<td>
-<span class="listing-author">Zhu, Feng and {Emile-Geay}, Julien and Anchukaitis, Kevin J. and McKay, Nicholas P. and Stevenson, Samantha and Meng, Zilu</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Scientific Data</i>
 </td>
-
 </tr>
-
-<tr data-index="6" data-listing-title-sort="Pyleoclim: Paleoclimate Timeseries Analysis and Visualization With Python">
-<td>
-<span class="listing-year">2022</span>
+<tr data-index="6">
+<!-- Year Column -->
+<td class="listing-year">
+2022
 </td>
-<td>
-<a href="khiderPyleoclimPaleoclimateTimeseries2022" class="title listing-title">Pyleoclim: Paleoclimate Timeseries Analysis and Visualization With Python</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.1029/2022PA004509"> Pyleoclim: Paleoclimate Timeseries Analysis and Visualization With Python </a>
 </td>
-<td>
-<span class="listing-journal">Paleoceanography and Paleoclimatology</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Khider, Deborah and Emile-Geay, Julien and Zhu, Feng and James, Alexander and Landers, Jordan and Ratnakar, Varun and Gil, Yolanda
 </td>
-<td>
-<span class="listing-author">Khider, Deborah and {Emile-Geay}, Julien and Zhu, Feng and James, Alexander and Landers, Jordan and Ratnakar, Varun and Gil, Yolanda</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Paleoceanography and Paleoclimatology</i>
 </td>
-
 </tr>
-
-<tr data-index="7" data-listing-title-sort="A Re-Appraisal of the ENSO Response to Volcanism with Paleoclimate Data Assimilation">
-<td>
-<span class="listing-year">2022</span>
+<tr data-index="7">
+<!-- Year Column -->
+<td class="listing-year">
+2022
 </td>
-<td>
-<a href="zhuReappraisalENSOResponse2022" class="title listing-title">A Re-Appraisal of the ENSO Response to Volcanism with Paleoclimate Data Assimilation</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.1038/s41467-022-28210-1"> A Re-Appraisal of the ENSO Response to Volcanism with Paleoclimate Data Assimilation </a>
 </td>
-<td>
-<span class="listing-journal">Nature Communications</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Zhu, Feng and Emile-Geay, Julien and Anchukaitis, Kevin J. and Hakim, Gregory J. and Wittenberg, Andrew T. and Morales, Mariano S. and Toohey, Matthew and King, Jonathan
 </td>
-<td>
-<span class="listing-author">Zhu, Feng and {Emile-Geay}, Julien and Anchukaitis, Kevin J. and Hakim, Gregory J. and Wittenberg, Andrew T. and Morales, Mariano S. and Toohey, Matthew and King, Jonathan</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Nature Communications</i>
 </td>
-
 </tr>
-
-<tr data-index="8" data-listing-title-sort="A Data Assimilation Approach to Last Millennium Temperature Field Reconstruction Using a Limited High-Sensitivity Proxy Network">
-<td>
-<span class="listing-year">2021</span>
+<tr data-index="8">
+<!-- Year Column -->
+<td class="listing-year">
+2021
 </td>
-<td>
-<a href="kingDataAssimilationApproach2021" class="title listing-title">A Data Assimilation Approach to Last Millennium Temperature Field Reconstruction Using a Limited High-Sensitivity Proxy Network</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.1175/JCLI-D-20-0661.1"> A Data Assimilation Approach to Last Millennium Temperature Field Reconstruction Using a Limited High-Sensitivity Proxy Network </a>
 </td>
-<td>
-<span class="listing-journal">Journal of Climate</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+King, Jonathan M. and Anchukaitis, Kevin J. and Tierney, Jessica E. and Hakim, Gregory J. and Emile-Geay, Julien and Zhu, Feng and Wilson, Rob
 </td>
-<td>
-<span class="listing-author">King, Jonathan M. and Anchukaitis, Kevin J. and Tierney, Jessica E. and Hakim, Gregory J. and {Emile-Geay}, Julien and Zhu, Feng and Wilson, Rob</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Journal of Climate</i>
 </td>
-
 </tr>
-
-<tr data-index="9" data-listing-title-sort="Decadal Climate Variability in the Tropical Pacific: Characteristics, Causes, Predictability, and Prospects">
-<td>
-<span class="listing-year">2021</span>
+<tr data-index="9">
+<!-- Year Column -->
+<td class="listing-year">
+2021
 </td>
-<td>
-<a href="powerDecadalClimateVariability2021" class="title listing-title">Decadal Climate Variability in the Tropical Pacific: Characteristics, Causes, Predictability, and Prospects</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.1126/science.aay9165"> Decadal Climate Variability in the Tropical Pacific: Characteristics, Causes, Predictability, and Prospects </a>
 </td>
-<td>
-<span class="listing-journal">Science</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Power, Scott and Lengaigne, Matthieu and Capotondi, Antonietta and Khodri, Myriam and Vialard, Jér^ome and Jebri, Beyrem and Guilyardi, Eric and McGregor, Shayne and Kug, Jong-Seong and Newman, Matthew and McPhaden, Michael J. and Meehl, Gerald and Smith, Doug and Cole, Julia and Emile-Geay, Julien and Vimont, Daniel and Wittenberg, Andrew T. and Collins, Mat and Kim, Geon-Il and Cai, Wenju and Okumura, Yuko and Chung, Christine and Cobb, Kim M. and Delage, Franois and Planton, Yann Y. and Levine, Aaron and Zhu, Feng and Sprintall, Janet and Di Lorenzo, Emanuele and Zhang, Xuebin and Luo, Jing-Jia and Lin, Xiaopei and Balmaseda, Magdalena and Wang, Guojian and Henley, Benjamin J.
 </td>
-<td>
-<span class="listing-author">Power, Scott and Lengaigne, Matthieu and Capotondi, Antonietta and Khodri, Myriam and Vialard, J{'e}r{^o}me and Jebri, Beyrem and Guilyardi, Eric and McGregor, Shayne and Kug, Jong-Seong and Newman, Matthew and McPhaden, Michael J. and Meehl, Gerald and Smith, Doug and Cole, Julia and {Emile-Geay}, Julien and Vimont, Daniel and Wittenberg, Andrew T. and Collins, Mat and Kim, Geon-Il and Cai, Wenju and Okumura, Yuko and Chung, Christine and Cobb, Kim M. and Delage, Fran{}ois and Planton, Yann Y. and Levine, Aaron and Zhu, Feng and Sprintall, Janet and Di Lorenzo, Emanuele and Zhang, Xuebin and Luo, Jing-Jia and Lin, Xiaopei and Balmaseda, Magdalena and Wang, Guojian and Henley, Benjamin J.</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Science</i>
 </td>
-
 </tr>
-
-<tr data-index="10" data-listing-title-sort="Seeing the Future through the Lens of the Past: Fusing Paleoclimate Observations and Models">
-<td>
-<span class="listing-year">2021</span>
+<tr data-index="10">
+<!-- Year Column -->
+<td class="listing-year">
+2021
 </td>
-<td>
-<a href="zhuSeeingFutureLens2021" class="title listing-title">Seeing the Future through the Lens of the Past: Fusing Paleoclimate Observations and Models</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href=""> Seeing the Future through the Lens of the Past: Fusing Paleoclimate Observations and Models </a>
 </td>
-<td>
-<span class="listing-journal">&nbsp;</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Zhu, Feng
 </td>
-<td>
-<span class="listing-author">Zhu, Feng</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i></i>
 </td>
-
 </tr>
-
-<tr data-index="11" data-listing-title-sort="Past ENSO Variability: Observations, Models, and Implications">
-<td>
-<span class="listing-year">2020</span>
+<tr data-index="11">
+<!-- Year Column -->
+<td class="listing-year">
+2020
 </td>
-<td>
-<a href="emile-geayENSOVariabilityObservations2020" class="title listing-title">Past ENSO Variability: Observations, Models, and Implications</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.1002/9781119548164.ch5"> Past ENSO Variability: Observations, Models, and Implications </a>
 </td>
-<td>
-<span class="listing-journal">El {{Ni~no Southern Oscillation}} in a {{Changing Climate}}</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Emile-Geay, Julien and Cobb, Kim M. and Cole, Julia E. and Elliot, Mary and Zhu, Feng
 </td>
-<td>
-<span class="listing-author">Emile-Geay, Julien and Cobb, Kim M. and Cole, Julia E. and Elliot, Mary and Zhu, Feng</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>El Ni~no Southern Oscillation in a Changing Climate</i>
 </td>
-
 </tr>
-
-<tr data-index="12" data-listing-title-sort="Resolving the Differences in the Simulated and Reconstructed Temperature Response to Volcanism">
-<td>
-<span class="listing-year">2020</span>
+<tr data-index="12">
+<!-- Year Column -->
+<td class="listing-year">
+2020
 </td>
-<td>
-<a href="zhuResolvingDifferencesSimulated2020" class="title listing-title">Resolving the Differences in the Simulated and Reconstructed Temperature Response to Volcanism</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.1029/2019GL086908"> Resolving the Differences in the Simulated and Reconstructed Temperature Response to Volcanism </a>
 </td>
-<td>
-<span class="listing-journal">Geophysical Research Letters</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Zhu, Feng and Emile-Geay, Julien and Hakim, Gregory J. and King, Jonathan and Anchukaitis, Kevin J.
 </td>
-<td>
-<span class="listing-author">Zhu, Feng and Emile-Geay, Julien and Hakim, Gregory J. and King, Jonathan and Anchukaitis, Kevin J.</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Geophysical Research Letters</i>
 </td>
-
 </tr>
-
-<tr data-index="13" data-listing-title-sort="Toward Community Resources for Paleoclimate Data Assimilation, Reanalysis, and Proxy System Modeling">
-<td>
-<span class="listing-year">2019</span>
+<tr data-index="13">
+<!-- Year Column -->
+<td class="listing-year">
+2019
 </td>
-<td>
-<a href="evansCommunityResourcesPaleoclimate2019" class="title listing-title">Toward Community Resources for Paleoclimate Data Assimilation, Reanalysis, and Proxy System Modeling</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.22498/pages.27.2.88"> Toward Community Resources for Paleoclimate Data Assimilation, Reanalysis, and Proxy System Modeling </a>
 </td>
-<td>
-<span class="listing-journal">Past Global Changes Magazine</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Evans, M. N. and Goossee, H. and Emile-Geay, J. and Zhu, F. and Dee, S. G. and Franke, J. and Jeong, J. and Rezsöhazy, J. and Thompson, D. M. and Amrhein, D. and Cane, M. A. and Kaplan, A. and Kalnay, E. and Tallapragada, V. and Okazaki, A. and Lawman, A. and Wright, N. and Herho, S. H. S. and Schmidt, G. and Loutre, M. F. and Parsons, L. and Nadimikeri, J.
 </td>
-<td>
-<span class="listing-author">Evans, M. N. and Goossee, H. and {Emile-Geay}, J. and Zhu, F. and Dee, S. G. and Franke, J. and Jeong, J. and Rezs{"o}hazy, J. and Thompson, D. M. and Amrhein, D. and Cane, M. A. and Kaplan, A. and Kalnay, E. and Tallapragada, V. and Okazaki, A. and Lawman, A. and Wright, N. and Herho, S. H. S. and Schmidt, G. and Loutre, M. F. and Parsons, L. and Nadimikeri, J.</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Past Global Changes Magazine</i>
 </td>
-
 </tr>
-
-<tr data-index="14" data-listing-title-sort="Consistent Multidecadal Variability in Global Temperature Reconstructions and Simulations over the Common Era">
-<td>
-<span class="listing-year">2019</span>
+<tr data-index="14">
+<!-- Year Column -->
+<td class="listing-year">
+2019
 </td>
-<td>
-<a href="pages2kconsortiumConsistentMultidecadalVariability2019" class="title listing-title">Consistent Multidecadal Variability in Global Temperature Reconstructions and Simulations over the Common Era</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.1038/s41561-019-0400-0"> Consistent Multidecadal Variability in Global Temperature Reconstructions and Simulations over the Common Era </a>
 </td>
-<td>
-<span class="listing-journal">Nature Geoscience</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+PAGES 2k Consortium
 </td>
-<td>
-<span class="listing-author">PAGES 2k Consortium</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Nature Geoscience</i>
 </td>
-
 </tr>
-
-<tr data-index="15" data-listing-title-sort="Climate Models Can Correctly Simulate the Continuum of Global-Average Temperature Variability">
-<td>
-<span class="listing-year">2019</span>
+<tr data-index="15">
+<!-- Year Column -->
+<td class="listing-year">
+2019
 </td>
-<td>
-<a href="zhuClimateModelsCan2019" class="title listing-title">Climate Models Can Correctly Simulate the Continuum of Global-Average Temperature Variability</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.1073/pnas.1809959116"> Climate Models Can Correctly Simulate the Continuum of Global-Average Temperature Variability </a>
 </td>
-<td>
-<span class="listing-journal">Proceedings of the National Academy of Sciences</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Zhu, Feng and Emile-Geay, Julien and McKay, Nicholas P. and Hakim, Gregory J. and Khider, Deborah and Ault, Toby R. and Steig, Eric J. and Dee, Sylvia and Kirchner, James W.
 </td>
-<td>
-<span class="listing-author">Zhu, Feng and {Emile-Geay}, Julien and McKay, Nicholas P. and Hakim, Gregory J. and Khider, Deborah and Ault, Toby R. and Steig, Eric J. and Dee, Sylvia and Kirchner, James W.</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Proceedings of the National Academy of Sciences</i>
 </td>
-
 </tr>
-
-<tr data-index="16" data-listing-title-sort="Super-Parameterization in GRAPES: The Construction of SP-GRAPES and Associated Preliminary Results">
-<td>
-<span class="listing-year">2015</span>
+<tr data-index="16">
+<!-- Year Column -->
+<td class="listing-year">
+2015
 </td>
-<td>
-<a href="zhuSuperparameterizationGRAPESConstruction2015" class="title listing-title">Super-Parameterization in GRAPES: The Construction of SP-GRAPES and Associated Preliminary Results</a>
+<!-- Title Column (Linked to URL and Cleaned) -->
+<td class="listing-title">
+<a href="https://doi.org/10.1007/s13351-015-4074-2"> Super-Parameterization in GRAPES: The Construction of SP-GRAPES and Associated Preliminary Results </a>
 </td>
-<td>
-<span class="listing-journal">Journal of Meteorological Research</span>
+<!-- Authors Column (Cleaned) -->
+<td class="listing-author">
+Zhu, Feng and Xu, Guoqiang and Zheng, Xiaohui and Wang, Yuhong
 </td>
-<td>
-<span class="listing-author">Zhu, Feng and Xu, Guoqiang and Zheng, Xiaohui and Wang, Yuhong</span>
+<!-- Journal Column -->
+<td class="listing-journal">
+<i>Journal of Meteorological Research</i>
 </td>
-
 </tr>
-
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
