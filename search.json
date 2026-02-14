@@ -4,36 +4,14 @@
     "href": "index.html",
     "title": "Dr. Feng Zhu",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "PAGE WIP"
   },
   {
     "objectID": "research/index.html",
     "href": "research/index.html",
     "title": "Research",
     "section": "",
-    "text": "My work explores the boundaries between order and chaos. I use high-performance computing to map the state-space of the Lorenz-63 model under varying parameters.",
-    "crumbs": [
-      "Research",
-      "Research Overview"
-    ]
-  },
-  {
-    "objectID": "research/index.html#chaotic-systems",
-    "href": "research/index.html#chaotic-systems",
-    "title": "Research",
-    "section": "",
-    "text": "My work explores the boundaries between order and chaos. I use high-performance computing to map the state-space of the Lorenz-63 model under varying parameters.",
-    "crumbs": [
-      "Research",
-      "Research Overview"
-    ]
-  },
-  {
-    "objectID": "research/index.html#atmospheric-science",
-    "href": "research/index.html#atmospheric-science",
-    "title": "Research",
-    "section": "Atmospheric Science",
-    "text": "Atmospheric Science\nI apply nonlinear dynamics to improve the predictability of short-term weather patterns, focusing on how small measurement errors propagate through simulation models.\n\n\n\n\n\n\nNote\n\n\n\nI am currently looking for collaborators interested in Topological Data Analysis applied to chaotic manifolds.",
+    "text": "Page WIP",
     "crumbs": [
       "Research",
       "Research Overview"
