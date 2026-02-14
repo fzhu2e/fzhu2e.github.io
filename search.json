@@ -1,0 +1,60 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Dr. Feng Zhu",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "My work explores the boundaries between order and chaos. I use high-performance computing to map the state-space of the Lorenz-63 model under varying parameters.",
+    "crumbs": [
+      "Research",
+      "Research Overview"
+    ]
+  },
+  {
+    "objectID": "research/index.html#chaotic-systems",
+    "href": "research/index.html#chaotic-systems",
+    "title": "Research",
+    "section": "",
+    "text": "My work explores the boundaries between order and chaos. I use high-performance computing to map the state-space of the Lorenz-63 model under varying parameters.",
+    "crumbs": [
+      "Research",
+      "Research Overview"
+    ]
+  },
+  {
+    "objectID": "research/index.html#atmospheric-science",
+    "href": "research/index.html#atmospheric-science",
+    "title": "Research",
+    "section": "Atmospheric Science",
+    "text": "Atmospheric Science\nI apply nonlinear dynamics to improve the predictability of short-term weather patterns, focusing on how small measurement errors propagate through simulation models.\n\n\n\n\n\n\nNote\n\n\n\nI am currently looking for collaborators interested in Topological Data Analysis applied to chaotic manifolds.",
+    "crumbs": [
+      "Research",
+      "Research Overview"
+    ]
+  },
+  {
+    "objectID": "research/lorenz63_demo.html",
+    "href": "research/lorenz63_demo.html",
+    "title": "Lorenz63 Simulation",
+    "section": "",
+    "text": "Move the sliders below to see the Butterfly Effect in action. This simulation runs entirely in your browser.",
+    "crumbs": [
+      "Research",
+      "Lorenz63 Simulation"
+    ]
+  },
+  {
+    "objectID": "publications/index.html",
+    "href": "publications/index.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Year\n      \n      \n        Title\n      \n      \n        Publisher\n      \n      \n        Authors\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nYear\n\n\n\nTitle\n\n\n\nPublisher\n\n\n\nAuthors\n\n\n\n\n\n\n\n\n2026\n\n\nA Database of Databases for Common Era Paleoclimate Applications\n\n\nEarth System Science Data\n\n\nEvans, Michael N. and L{\"u}cke, Lucie J. and Fan, Kevin J. and Zhu, Feng\n\n\n\n\n\n\n2025\n\n\nTemporal Comparisons Involving Paleoclimate Data Assimilation: Challenges and Remedies\n\n\nJournal of Climate\n\n\n{Emile-Geay}, Julien and Hakim, Gregory J. and Viens, Frederi and Zhu, Feng and Amrhein, Daniel E.\n\n\n\n\n\n\n2025\n\n\nIsoSim: A Long-term Benchmark Dataset for Water Isotope Emulation in Global Climate Models\n\n\nProceedings of the 33rd {{ACM International Conference}} on {{Advances}} in {{Geographic Information Systems}}\n\n\nLi, Zhili and Cheng, Qi and Li, Ruohan and Zhu, Feng and Jia, Xiaowei and Xie, Yiqun\n\n\n\n\n\n\n2025\n\n\nThe Unstable East Asian Summer Monsoon - ENSO Relationship over the Past 700 Years\n\n\nGlobal and Planetary Change\n\n\nLuo, Jinfeng and Hu, Jun and Zhu, Feng and Liang, Risheng and Zhou, Zeyu\n\n\n\n\n\n\n2024\n\n\nCfr (V2024.1.26): A Python Package for Climate Field Reconstruction\n\n\nGeoscientific Model Development\n\n\nZhu, Feng and {Emile-Geay}, Julien and Hakim, Gregory J. and Guillot, Dominique and Khider, Deborah and Tardif, Robert and Perkins, Walter A.\n\n\n\n\n\n\n2023\n\n\nA Pseudoproxy Emulation of the PAGES 2k Database Using a Hierarchy of Proxy System Models\n\n\nScientific Data\n\n\nZhu, Feng and {Emile-Geay}, Julien and Anchukaitis, Kevin J. and McKay, Nicholas P. and Stevenson, Samantha and Meng, Zilu\n\n\n\n\n\n\n2022\n\n\nPyleoclim: Paleoclimate Timeseries Analysis and Visualization With Python\n\n\nPaleoceanography and Paleoclimatology\n\n\nKhider, Deborah and {Emile-Geay}, Julien and Zhu, Feng and James, Alexander and Landers, Jordan and Ratnakar, Varun and Gil, Yolanda\n\n\n\n\n\n\n2022\n\n\nA Re-Appraisal of the ENSO Response to Volcanism with Paleoclimate Data Assimilation\n\n\nNature Communications\n\n\nZhu, Feng and {Emile-Geay}, Julien and Anchukaitis, Kevin J. and Hakim, Gregory J. and Wittenberg, Andrew T. and Morales, Mariano S. and Toohey, Matthew and King, Jonathan\n\n\n\n\n\n\n2021\n\n\nA Data Assimilation Approach to Last Millennium Temperature Field Reconstruction Using a Limited High-Sensitivity Proxy Network\n\n\nJournal of Climate\n\n\nKing, Jonathan M. and Anchukaitis, Kevin J. and Tierney, Jessica E. and Hakim, Gregory J. and {Emile-Geay}, Julien and Zhu, Feng and Wilson, Rob\n\n\n\n\n\n\n2021\n\n\nDecadal Climate Variability in the Tropical Pacific: Characteristics, Causes, Predictability, and Prospects\n\n\nScience\n\n\nPower, Scott and Lengaigne, Matthieu and Capotondi, Antonietta and Khodri, Myriam and Vialard, J{'e}r{^o}me and Jebri, Beyrem and Guilyardi, Eric and McGregor, Shayne and Kug, Jong-Seong and Newman, Matthew and McPhaden, Michael J. and Meehl, Gerald and Smith, Doug and Cole, Julia and {Emile-Geay}, Julien and Vimont, Daniel and Wittenberg, Andrew T. and Collins, Mat and Kim, Geon-Il and Cai, Wenju and Okumura, Yuko and Chung, Christine and Cobb, Kim M. and Delage, Fran{}ois and Planton, Yann Y. and Levine, Aaron and Zhu, Feng and Sprintall, Janet and Di Lorenzo, Emanuele and Zhang, Xuebin and Luo, Jing-Jia and Lin, Xiaopei and Balmaseda, Magdalena and Wang, Guojian and Henley, Benjamin J.\n\n\n\n\n\n\n2021\n\n\nSeeing the Future through the Lens of the Past: Fusing Paleoclimate Observations and Models\n\n\n \n\n\nZhu, Feng\n\n\n\n\n\n\n2020\n\n\nPast ENSO Variability: Observations, Models, and Implications\n\n\nEl {{Ni~no Southern Oscillation}} in a {{Changing Climate}}\n\n\nEmile-Geay, Julien and Cobb, Kim M. and Cole, Julia E. and Elliot, Mary and Zhu, Feng\n\n\n\n\n\n\n2020\n\n\nResolving the Differences in the Simulated and Reconstructed Temperature Response to Volcanism\n\n\nGeophysical Research Letters\n\n\nZhu, Feng and Emile-Geay, Julien and Hakim, Gregory J. and King, Jonathan and Anchukaitis, Kevin J.\n\n\n\n\n\n\n2019\n\n\nToward Community Resources for Paleoclimate Data Assimilation, Reanalysis, and Proxy System Modeling\n\n\nPast Global Changes Magazine\n\n\nEvans, M. N. and Goossee, H. and {Emile-Geay}, J. and Zhu, F. and Dee, S. G. and Franke, J. and Jeong, J. and Rezs{\"o}hazy, J. and Thompson, D. M. and Amrhein, D. and Cane, M. A. and Kaplan, A. and Kalnay, E. and Tallapragada, V. and Okazaki, A. and Lawman, A. and Wright, N. and Herho, S. H. S. and Schmidt, G. and Loutre, M. F. and Parsons, L. and Nadimikeri, J.\n\n\n\n\n\n\n2019\n\n\nConsistent Multidecadal Variability in Global Temperature Reconstructions and Simulations over the Common Era\n\n\nNature Geoscience\n\n\nPAGES 2k Consortium\n\n\n\n\n\n\n2019\n\n\nClimate Models Can Correctly Simulate the Continuum of Global-Average Temperature Variability\n\n\nProceedings of the National Academy of Sciences\n\n\nZhu, Feng and {Emile-Geay}, Julien and McKay, Nicholas P. and Hakim, Gregory J. and Khider, Deborah and Ault, Toby R. and Steig, Eric J. and Dee, Sylvia and Kirchner, James W.\n\n\n\n\n\n\n2015\n\n\nSuper-Parameterization in GRAPES: The Construction of SP-GRAPES and Associated Preliminary Results\n\n\nJournal of Meteorological Research\n\n\nZhu, Feng and Xu, Guoqiang and Zheng, Xiaohui and Wang, Yuhong\n\n\n\n\n\n\nNo matching items"
+  }
+]
