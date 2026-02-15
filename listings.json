@@ -1,6 +1,12 @@
 [
   {
-    "listing": "/publications/index.html",
+    "listing": "/pubs/index.html",
     "items": []
+  },
+  {
+    "listing": "/projs/index.html",
+    "items": [
+      "/projs/lorenz63_demo.html"
+    ]
   }
 ]
