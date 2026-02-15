@@ -84,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-last-update','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-last-update','listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-last-update","listing-title","listing-description"],
+      searchColumns: ["listing-last-update","listing-image","listing-title","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -143,6 +143,7 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -344,9 +345,9 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Q0VTTQ==">CESM <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGF0YSUyMEFzc2ltaWxhdGlvbg==">Data Assimilation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TG9yZW56NjM=">Lorenz63 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9kZWxpbmc=">Modeling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(3)</span></div><div class="category" data-category="WGFycmF5">Xarray <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -384,6 +385,9 @@ window.Quarto = {
       <option value="listing-last-update" data-direction="asc">
         Last Update
       </option>
+      <option value="listing-image" data-direction="asc">
+        Image
+      </option>
       <option value="listing-title" data-direction="asc">
         Title
       </option>
@@ -398,7 +402,12 @@ window.Quarto = {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1771117786698" data-listing-reading-time-sort="3" data-listing-word-count-sort="539">
+<div class="quarto-post image-left" data-index="0" data-categories="UHl0aG9uJTJDTW9kZWxpbmclMkNMb3Jlbno2Mw==" data-listing-file-modified-sort="1771119713194" data-listing-reading-time-sort="3" data-listing-word-count-sort="539">
+<div class="thumbnail"><a href="../projs/lorenz63_demo.html" class="no-external">
+
+<img loading="lazy" src="../projs/lorenz63_demo.png" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../projs/lorenz63_demo.html" class="no-external">Lorenz63 Demo</a>
@@ -415,36 +424,46 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1771117167771" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
+<div class="quarto-post image-left" data-index="1" data-categories="UHl0aG9uJTJDWGFycmF5JTJDQ0VTTQ==">
+<div class="thumbnail"><a href="https://ncar.github.io/x4c" class="no-external">
+
+<img loading="lazy" src="https://ncar.github.io/x4c/_static/x4c-logo.png" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../projs/x4c.html" class="no-external">x4c: Xarray for CESM</a>
+<a href="https://ncar.github.io/x4c" class="no-external">x4c: Xarray for CESM</a>
 </h3>
-<div class="delink listing-description"><a href="../projs/x4c.html" class="no-external">
+<div class="delink listing-description"><a href="https://ncar.github.io/x4c" class="no-external">
 <p>x4c is an Xarray extension that aims to support efficient and intuitive CESM output postprocessing, analysis, and visualization.</p>
 </a></div>
 </div>
 <div class="metadata">
-<a href="../projs/x4c.html" class="no-external">
+<a href="https://ncar.github.io/x4c" class="no-external">
 <div class="metadata-value listing-last-update">
 2026-02
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1771116800821" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
+<div class="quarto-post image-left" data-index="2" data-categories="UHl0aG9uJTJDRGF0YSUyMEFzc2ltaWxhdGlvbg==">
+<div class="thumbnail"><a href="https://fzhu2e.github.io/cfr/" class="no-external">
+
+<img loading="lazy" src="https://fzhu2e.github.io/cfr/_static/cfr-logo.jpg" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../projs/cfr.html" class="no-external">cfr: a Python package for climate field reconstruction</a>
+<a href="https://fzhu2e.github.io/cfr/" class="no-external">cfr: a Python package for climate field reconstruction</a>
 </h3>
-<div class="delink listing-description"><a href="../projs/cfr.html" class="no-external">
+<div class="delink listing-description"><a href="https://fzhu2e.github.io/cfr/" class="no-external">
 <p>cfr aims to provide a universal framework for climate field reconstruction (CFR).</p>
 </a></div>
 </div>
 <div class="metadata">
-<a href="../projs/cfr.html" class="no-external">
+<a href="https://fzhu2e.github.io/cfr/" class="no-external">
 <div class="metadata-value listing-last-update">
-2024-04
+2024-02
 </div>
 </a>
 </div>
