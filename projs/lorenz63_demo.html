@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A demonstration of the Butterfly Effect using the Lorenz63 model.">
+<meta name="description" content="Compare two different Lorenz63 trajectories with custom parameters.">
 
 <title>Lorenz63 Demo – Feng Zhu</title>
 <style>
@@ -73,14 +73,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".quarto-listing a").forEach(link => {
-    link.setAttribute("target", "_blank");
-    link.setAttribute("rel", "noopener noreferrer");
-  });
-});
-</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
 
@@ -305,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div>
   <div class="description">
-    A demonstration of the Butterfly Effect using the Lorenz63 model.
+    Compare two different Lorenz63 trajectories with custom parameters.
   </div>
 </div>
 
@@ -322,14 +314,14 @@ document.addEventListener("DOMContentLoaded", function () {
 </header>
 
 
-<p>Move the sliders below to see the Butterfly Effect in action. This simulation runs entirely in your browser.</p>
+<p>Modify the parameters for two different runs to see how sensitive the system is to initial conditions and coefficients.</p>
 <script src="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.39.0/build/stlite.js"></script>
 <div id="stlite-root">
 
 </div>
 <script>
       stlite.mount({
-        requirements: ["matplotlib", "numpy"], // Install needed packages in the browser
+        requirements: ["matplotlib", "numpy"],
         entrypoint: "app.py",
         files: {
           "app.py": `
@@ -339,67 +331,83 @@ import numpy as np
 
 # --- 1. LORENZ63 CLASS ---
 class Lorenz63:
-    def __init__(self, x, y, z, sigma=10, rho=28, beta=8/3):
+    def __init__(self, x, y, z, sigma, rho, beta):
         self.x, self.y, self.z = x, y, z
         self.xs, self.ys, self.zs = [x], [y], [z]
         self.sigma, self.rho, self.beta = sigma, rho, beta
     
-    def grad(self):
-        x_dot = self.sigma*(self.y - self.x)
-        y_dot = self.x*(self.rho - self.z) - self.y
-        z_dot = self.x*self.y - self.beta*self.z
+    def grad(self, x, y, z):
+        x_dot = self.sigma*(y - x)
+        y_dot = x*(self.rho - z) - y
+        z_dot = x*y - self.beta*z
         return x_dot, y_dot, z_dot
 
-    def forward(self, num_steps=1, dt=0.01):
+    def forward(self, num_steps, dt):
+        curr_x, curr_y, curr_z = self.x, self.y, self.z
         for _ in range(num_steps):
-            x_dot, y_dot, z_dot = self.grad()
-            self.x += x_dot * dt
-            self.y += y_dot * dt
-            self.z += z_dot * dt
-            self.xs.append(self.x)
-            self.ys.append(self.y)
-            self.zs.append(self.z)
+            x_dot, y_dot, z_dot = self.grad(curr_x, curr_y, curr_z)
+            curr_x += x_dot * dt
+            curr_y += y_dot * dt
+            curr_z += z_dot * dt
+            self.xs.append(curr_x)
+            self.ys.append(curr_y)
+            self.zs.append(curr_z)
 
 # --- 2. STREAMLIT UI ---
 st.set_page_config(page_title="Lorenz63 Demo", layout="wide")
 
-st.sidebar.header("Model Parameters")
-sigma = st.sidebar.slider("Sigma (σ)", 0.0, 50.0, 10.0)
-rho = st.sidebar.slider("Rho (ρ)", 0.0, 50.0, 28.0)
-beta_base = st.sidebar.slider("Beta (β)", 0.0, 10.0, 2.666)
-delta_beta = st.sidebar.number_input("Perturbation in β (Error)", value=0.001, format="%.4f")
+st.sidebar.subheader("Time Control")
+n_steps = st.sidebar.slider("Total Number of Steps (nt)", 100, 4000, 2000)
+dt = st.sidebar.slider("Time Step (dt)", 0.01, 0.02, 0.01, format="%.2f")
+t_visible = st.sidebar.select_slider("Time Progress (t)", options=range(n_steps + 1), value=n_steps)
 
-st.sidebar.header("Simulation Settings")
-n_steps = st.sidebar.slider("Number of Steps", 100, 5000, 1000)
-t_visible = st.sidebar.select_slider("Time Progress", options=range(n_steps), value=n_steps-1)
-
-# --- 3. COMPUTATION ---
-# We calculate once per interaction
-x0, y0, z0 = 0.0, 1.0, 1.05
-
-L1 = Lorenz63(x0, y0, z0, sigma=sigma, rho=rho, beta=beta_base)
-L1.forward(n_steps)
-
-L2 = Lorenz63(x0, y0, z0, sigma=sigma, rho=rho, beta=beta_base + delta_beta)
-L2.forward(n_steps)
-
-# --- 4. VISUALIZATION ---
 st.title("Lorenz63: The Butterfly Effect")
-st.write(f"Showing divergence between two trajectories with a Δβ of {delta_beta}")
 
-left_spacer, mid_content, right_spacer = st.columns([2, 4, 2])
+# Create two columns for Parameter Inputs
+col_a, col_b, col_c = st.columns([10, 1, 10])
 
-with mid_content:
-    fig = plt.figure(figsize=[10, 7])
+with col_c:
+    st.subheader("Run A Parameters")
+    c1, c2, c3 = st.columns(3)
+    x0_a = c1.number_input("x0 (A)", value=0.0, step=0.001, format="%.3f")
+    y0_a = c2.number_input("y0 (A)", value=1.0, step=0.001, format="%.3f")
+    z0_a = c3.number_input("z0 (A)", value=1.05, step=0.001, format="%.3f")
+    
+    c4, c5, c6 = st.columns(3)
+    s_a = c4.number_input("Sigma (A)", value=10.0, step=0.001, format="%.3f")
+    r_a = c5.number_input("Rho (A)", value=28.0, step=0.001, format="%.3f")
+    b_a = c6.number_input("Beta (A)", value=2.667, step=0.001, format="%.3f")
+
+    st.subheader("Run B Parameters")
+    c1, c2, c3 = st.columns(3)
+    x0_b = c1.number_input("x0 (B)", value=0.0, step=0.001, format="%.3f")
+    y0_b = c2.number_input("y0 (B)", value=1.0, step=0.001, format="%.3f")
+    z0_b = c3.number_input("z0 (B)", value=1.051, step=0.001, format="%.3f") # Small difference
+    
+    c4, c5, c6 = st.columns(3)
+    s_b = c4.number_input("Sigma (B)", value=10.0, step=0.001, format="%.3f")
+    r_b = c5.number_input("Rho (B)", value=28.0, step=0.001, format="%.3f")
+    b_b = c6.number_input("Beta (B)", value=2.667, step=0.001, format="%.3f")
+
+with col_a:
+    # --- 3. COMPUTATION ---
+    run_a = Lorenz63(x0_a, y0_a, z0_a, s_a, r_a, b_a)
+    run_a.forward(n_steps, dt)
+
+    run_b = Lorenz63(x0_b, y0_b, z0_b, s_b, r_b, b_b)
+    run_b.forward(n_steps, dt)
+
+    # --- 4. VISUALIZATION ---
+    fig = plt.figure(figsize=[12, 7])
     ax = fig.add_subplot(projection='3d')
 
-    # Plot trajectories up to the selected time step
-    ax.plot(L1.xs[:t_visible], L1.ys[:t_visible], L1.zs[:t_visible], lw=0.7, color='tab:blue', label='Base β')
-    ax.plot(L2.xs[:t_visible], L2.ys[:t_visible], L2.zs[:t_visible], lw=0.7, color='tab:orange', label='Perturbed β')
+    # Plot trajectories
+    ax.plot(run_a.xs[:t_visible+1], run_a.ys[:t_visible+1], run_a.zs[:t_visible+1], lw=0.8, color='tab:blue', label='Run A')
+    ax.plot(run_b.xs[:t_visible+1], run_b.ys[:t_visible+1], run_b.zs[:t_visible+1], lw=0.8, color='tab:orange', label='Run B')
 
-    # Draw the leading points
-    ax.scatter(L1.xs[t_visible], L1.ys[t_visible], L1.zs[t_visible], color='tab:blue', s=30)
-    ax.scatter(L2.xs[t_visible], L2.ys[t_visible], L2.zs[t_visible], color='tab:orange', s=30)
+    # Current position markers
+    ax.scatter(run_a.xs[t_visible], run_a.ys[t_visible], run_a.zs[t_visible], color='tab:blue', s=40)
+    ax.scatter(run_b.xs[t_visible], run_b.ys[t_visible], run_b.zs[t_visible], color='tab:orange', s=40)
 
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
@@ -408,13 +416,20 @@ with mid_content:
     ax.set_ylim(-30, 30)
     ax.set_zlim(0, 50)
     ax.legend()
-
+    plt.tight_layout()
     st.pyplot(fig)
 
-col1, col2, col3 = st.columns(3)
-col1.metric("Error dX", f"{abs(L1.xs[t_visible]-L2.xs[t_visible]):.2f}")
-col2.metric("Error dY", f"{abs(L1.ys[t_visible]-L2.ys[t_visible]):.2f}")
-col3.metric("Error dZ", f"{abs(L1.zs[t_visible]-L2.zs[t_visible]):.2f}")
+with col_c:
+    st.divider()
+    st.subheader("Results")
+    # Metrics
+    dist = np.sqrt((run_a.xs[t_visible]-run_b.xs[t_visible])**2 + 
+                   (run_a.ys[t_visible]-run_b.ys[t_visible])**2 + 
+                   (run_a.zs[t_visible]-run_b.zs[t_visible])**2)
+
+    st.metric("Run A (X, Y, Z)", f"{run_a.xs[t_visible]:.3f}, {run_a.ys[t_visible]:.3f}, {run_a.zs[t_visible]:.3f}")
+    st.metric("Run B (X, Y, Z)", f"{run_b.xs[t_visible]:.3f}, {run_b.ys[t_visible]:.3f}, {run_b.zs[t_visible]:.3f}")
+    st.metric("Euclidean Distance", f"{dist:.5f}")
 `,
         },
       });

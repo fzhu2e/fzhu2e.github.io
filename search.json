@@ -11,7 +11,7 @@
     "href": "projs/lorenz63_demo.html",
     "title": "Lorenz63 Demo",
     "section": "",
-    "text": "Move the sliders below to see the Butterfly Effect in action. This simulation runs entirely in your browser."
+    "text": "Modify the parameters for two different runs to see how sensitive the system is to initial conditions and coefficients."
   },
   {
     "objectID": "index.html",
@@ -39,6 +39,6 @@
     "href": "projs/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Last Update\n      \n      \n        Image\n      \n      \n        Title\n      \n      \n        Description\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLorenz63 Demo\n\n\nA demonstration of the Butterfly Effect using the Lorenz63 model.\n\n\n\n\n\n2026-02\n\n\n\n\n\n\n\n\n\n\n\n\nx4c: Xarray for CESM\n\n\nx4c is an Xarray extension that aims to support efficient and intuitive CESM output postprocessing, analysis, and visualization.\n\n\n\n\n\n2026-02\n\n\n\n\n\n\n\n\n\n\n\n\ncfr: a Python package for climate field reconstruction\n\n\ncfr aims to provide a universal framework for climate field reconstruction (CFR).\n\n\n\n\n\n2024-02\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Last Update\n      \n      \n        Image\n      \n      \n        Title\n      \n      \n        Description\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLorenz63 Demo\n\n\nCompare two different Lorenz63 trajectories with custom parameters.\n\n\n\n\n\n2026-02\n\n\n\n\n\n\n\n\n\n\n\n\nx4c: Xarray for CESM\n\n\nx4c is an Xarray extension that aims to support efficient and intuitive CESM output postprocessing, analysis, and visualization.\n\n\n\n\n\n2026-02\n\n\n\n\n\n\n\n\n\n\n\n\ncfr: a Python package for climate field reconstruction\n\n\ncfr aims to provide a universal framework for climate field reconstruction (CFR).\n\n\n\n\n\n2024-02\n\n\n\n\n\nNo matching items"
   }
 ]
