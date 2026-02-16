@@ -343,7 +343,7 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 <script>
-      stlite.mount({
+    stlite.mount({
         requirements: ["matplotlib", "numpy"],
         entrypoint: "app.py",
         files: {
@@ -462,6 +462,25 @@ with col_c:
 st.write(
     "Reference: [Lorenz, E. N. (1963). Deterministic nonperiodic flow. *Journal of the Atmospheric Sciences*, 20(2), 130-141.](https://doi.org/10.1175/1520-0469(1963)020%3C0130:DNF%3E2.0.CO;2)"
 )
+
+st.markdown("""
+<style>
+footer {visibility: hidden;}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<style>
+footer:after {
+    content: 'Made with Streamlit · © 2026 Feng Zhu · CC BY 4.0';
+    visibility: visible;
+    display: block;
+    position: relative;
+    padding: 5px;
+    top: 2px;
+}
+</style>
+""", unsafe_allow_html=True)
 `,
         },
       });
