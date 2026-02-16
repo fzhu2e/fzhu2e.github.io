@@ -338,7 +338,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Modify the parameters for two different runs to see how sensitive the system is to initial conditions and coefficients.</p>
 <script src="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.39.0/build/stlite.js"></script>
 <div id="stlite-root">
 
@@ -386,6 +385,11 @@ dt = st.sidebar.slider("Time Step (dt)", 0.01, 0.02, 0.01, format="%.2f")
 t_visible = st.sidebar.select_slider("Time Progress (t)", options=range(n_steps + 1), value=n_steps)
 
 st.title("Lorenz63: The Butterfly Effect")
+st.write(
+    "The Lorenz63 system is a set of three ordinary differential equations that exhibit chaotic behavior."
+    "In this demo, you can compare two different trajectories of the Lorenz63 system by adjusting their initial conditions (ICs) and parameters/forcing/boundary conditions (BCs)."
+    "Try making a small change to the ICs / BCs of Run B to see how it diverges from Run A over time!"
+)
 
 # Create two columns for Parameter Inputs
 col_a, col_b, col_c = st.columns([10, 1, 10])
@@ -454,6 +458,10 @@ with col_c:
     st.metric("Run A (X, Y, Z)", f"{run_a.xs[t_visible]:.3f}, {run_a.ys[t_visible]:.3f}, {run_a.zs[t_visible]:.3f}")
     st.metric("Run B (X, Y, Z)", f"{run_b.xs[t_visible]:.3f}, {run_b.ys[t_visible]:.3f}, {run_b.zs[t_visible]:.3f}")
     st.metric("Euclidean Distance", f"{dist:.5f}")
+
+st.write(
+    "Reference: [Lorenz, E. N. (1963). Deterministic nonperiodic flow. *Journal of the Atmospheric Sciences*, 20(2), 130-141.](https://doi.org/10.1175/1520-0469(1963)020%3C0130:DNF%3E2.0.CO;2)"
+)
 `,
         },
       });
