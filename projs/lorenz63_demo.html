@@ -73,6 +73,30 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var links = document.links;
+    for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+      
+      // 1. Detect if the link is to a completely different website
+      var isExternal = links[i].hostname !== window.location.hostname && links[i].hostname !== '';
+
+      // 2. Detect if the link is an internal project (stored in your projs folder)
+      // This catches the "*.qmd" projects from your listing
+      var isInternalProject = links[i].pathname.includes('/projs/') && 
+                              !links[i].pathname.endsWith('/projs/') && 
+                              !links[i].pathname.endsWith('index.html');
+
+      if (isExternal || isInternalProject) {
+        // Only apply to actual links (not mailto or tel)
+        if (links[i].protocol.indexOf('http') !== -1) {
+          links[i].target = '_blank';
+          links[i].setAttribute('rel', 'noopener noreferrer');
+        }
+      }
+    }
+  });
+</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
 
