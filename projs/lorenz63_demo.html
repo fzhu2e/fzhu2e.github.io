@@ -382,7 +382,7 @@ st.set_page_config(page_title="Lorenz63 Demo", layout="wide")
 st.sidebar.subheader("Time Control")
 n_steps = st.sidebar.slider("Total Number of Steps (nt)", 100, 4000, 2000)
 dt = st.sidebar.slider("Time Step (dt)", 0.01, 0.02, 0.01, format="%.2f")
-t_visible = st.sidebar.select_slider("Time Progress (t)", options=range(n_steps + 1), value=n_steps)
+t_visible = st.sidebar.select_slider("Time Progress", options=range(n_steps + 1), value=n_steps)
 
 st.title("Lorenz63: The Butterfly Effect")
 st.write(
